@@ -4,27 +4,92 @@
   cursor: pointer;
 }
 
-.menu {
-  display: none;
-  position: fixed;
-  top: 75px;
-  left: 0;
-  width: 350px;
-  height: 100vh; /* This give the height 100% of the screen or, '100% of View Height' */
-  background-color: #81C784;
-  border: 1px solid #004D40;
-  border-left: none;
-  border-bottom: none;
-  z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
-}
+// .menu {
+//   display: none;
+//   position: fixed;
+//   top: 75px;
+//   left: 0;
+//   width: 350px;
+//   height: 100vh; /* This give the height 100% of the screen or, '100% of View Height' */
+//   background-color: #81C784;
+//   border: 1px solid #004D40;
+//   border-left: none;
+//   border-bottom: none;
+//   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
+// }
 
-.menu ul li{
-  list-style-type: none;
-  font-size: 32px;
-  padding: 30px 0;
-  text-align: center;
-}
+// .menu ul li{
+//   list-style-type: none;
+//   font-size: 32px;
+//   padding: 30px 0;
+//   text-align: center;
+// }
 
 .menu--open {
   display: block;
 }
+
+.navbar{
+  background-color: #ee0000;
+  overflow: auto;
+  height: 103px;
+}
+.navbar a{
+  float:left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 14px 16px;
+  color: #f2f2f2;
+}
+.navbar ul{
+  margin: 8px 0 0 0;
+  list-style: none;
+ 
+}
+.navbar a:hover{
+  background-color:#ee0000;
+  color:#000;
+}
+.side-nav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #060606;
+  opacity: 0.8;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.8s;
+
+}
+.side-nav a{
+  padding: 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  display: block;
+  transition: 0.4s;
+}
+.side-nav a:hover{
+  color: #b31111;
+ 
+}
+.side-nav .btn-close{
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main{
+  transition: margin-left 0.8s;
+  padding-top: 40px;
+  overflow: hidden;
+  width: 100%;
+
+}
+@media(max-width: 568px){
+.navbar-nav{display: none;}
+} 

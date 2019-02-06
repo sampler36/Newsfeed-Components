@@ -10,20 +10,28 @@
     <script src="./Article/Article.js" async></script>
   </head>
   <body>
+      <nav class="navbar">
+          <span class="open-slide">
+              <a href="#" onclick="openSlideMenu()">
+                  <img class="menu-button" src="./assets/menu.png"/>
+              </a>
+          </span>
+      </nav>
+      <div id="side-menu" class="side-nav">
+          <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="#">Students</a>
+          <a href="#">Faculty</a>
+          <a href="#">Whats New</a>
+          <a href="#">Tech Trends</a>
+          <a href="#">Music</a>
+          <a href="#">Log Out</a>
+      </div>
+      <div id="main">
+
     <div class="header">
-      <img class="menu-button" src="./assets/menu.png"/>
       <h1>Lambda School Newsfeed</h1>
     </div>
-    <div class="menu">
-      <ul>
-        <li>Students</li>
-        <li>Faculty</li>
-        <li>What's New</li>
-        <li>Tech Trends</li>
-        <li>Music</li>
-        <li>Log Out</li>
-      </ul>
-    </div>
+
     <div class="articles">
       <div class="article">
         <h2>Lambda School Students: "We're the best!"</h2>
@@ -117,5 +125,18 @@
         <span class='expandButton'></span>
       </div>
     </div>
+      </div>
+
+    <script>
+      function openSlideMenu(){
+          document.getElementById('side-menu').style.width='250px';
+          document.getElementById('main').style.marginLeft='250px';
+      }
+
+      function closeSlideMenu(){
+            document.getElementById('side-menu').style.width='0px';
+            document.getElementById('main').style.marginLeft='0px';
+      }
+    </script>
   </body>
 </html>
