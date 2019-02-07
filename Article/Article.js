@@ -39,10 +39,36 @@ class Article {
 
 */
 
-let articles = document.querySelectorAll('.article');
-    articles.forEach(article => {
+const articles = domElement.querySelectorAll('.articles');
+    articles.forEach( article => {
       return new Article(article);
     })
 
-    // let btn =  document.querySelector(".expandButton");
-    // btn.textContent = siteContent["article"]["expandButton"];
+// class Panel {
+//     constructor(panel){
+//       this.panel = panel;
+//       this.heading = this.panel.querySelector('.panel-content h3');
+//       this.content = this.panel.querySelector('.panel-content p');
+//       console.log(this.heading);
+//       // Non-arrow function 
+//       //this.heading.addEventListener('click', this.togglePanel.bind(this));
+//       this.heading.addEventListener('click', (e) => this.togglePanel(e));
+//     }
+//     // Methods
+//     togglePanel(e) {
+//       // only need the event object if we are using it***
+//       console.log(e.target);
+//       this.content.classList.toggle('toggle-on');
+//     }
+//   }
+  
+//   const panels = document.querySelectorAll('.panel');
+  
+//   panels.forEach( panel => {
+//     return new Panel(panel);  
+//   });
+  
+  // panels = Array.from(panels).map( panel => {
+  //   return new Panel(panel);
+  // })
+  
